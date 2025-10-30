@@ -1,0 +1,14 @@
+(await token.allowance(owner.address, spender.address)).toString();
+(await token.balanceOf(receiver.address)).toString();
+(await token.balanceOf(owner.address)).toString();
+await token.connect(spender).transferFrom(owner.address, receiver.address, 500);
+(await token.allowance(owner.address, spender.address)).toString();
+await token.approve(spender.address, 1000);
+(await token.allowance(owner.address, spender.address)).toString();
+const token = await Token.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+const Token = await ethers.getContractFactory("MyToken");
+const [owner, spender, receiver] = await ethers.getSigners();
+(await token.allowance(owner.address, spender.address)).toString()
+const token = await Token.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3"); // địa chỉ contract deploy
+const Token = await ethers.getContractFactory("MyToken");
+const [owner, spender, receiver] = await ethers.getSigners();

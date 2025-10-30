@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ERC20 Approve Manager</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.14.0/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+
+  <h2>ERC-20 Approve Manager</h2>
+
+  <div id="connect-section">
+    <button id="connectButton">Connect MetaMask</button>
+    <p id="account"></p> </div>
+
+  <div id="token-section">
+    <input id="tokenAddress" placeholder="Token contract address" size="50">
+    <button id="loadToken">Load Token</button> </div>
+
+  <div id="crud-section" style="display:none;">
+    <h3>Spender List</h3>
+    <input id="spenderAddress" placeholder="Spender address" size="45">
+    <input id="amount" placeholder="Amount" type="number" min="0">
+    <button id="approveBtn">Approve</button>
+    <button id="revokeBtn">Revoke</button>
+
+    <table id="spenderTable">
+      <thead>
+        <tr><th>Spender</th><th>Allowance</th></tr>
+      </thead>
+      <tbody></tbody> </table>
+  </div>
+
+  <div id="history-section" style="display:none;">
+    <h3>Transaction History</h3>
+    <table id="historyTable">
+      <thead>
+        <tr><th>Type</th><th>From</th><th>To</th><th>Amount</th><th>Tx Hash</th></tr>
+      </thead>
+      <tbody></tbody> </table>
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>

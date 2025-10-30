@@ -1,0 +1,122 @@
+/* style.css */
+
+/* --- Cài đặt Toàn trang --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f8ff; /* Yêu cầu: Xanh nước biển nhạt (AliceBlue) */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    
+    /* Yêu cầu: Căn giữa tất cả nội dung */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2, h3 {
+    color: #0056b3; /* Màu xanh đậm cho tiêu đề */
+    text-align: center;
+}
+
+/* --- Khung chứa các Section --- */
+/* Áp dụng cho tất cả các khối nội dung chính */
+#connect-section,
+#token-section,
+#crud-section,
+#history-section {
+    background-color: #ffffff; /* Nền trắng cho các khối */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 800px; /* Giới hạn chiều rộng tối đa */
+    box-sizing: border-box;
+    
+    /* Căn giữa nội dung BÊN TRONG mỗi khối */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Nút bấm (Buttons) --- */
+button {
+    background-color: #007bff; /* Yêu cầu: Dễ nhìn (Xanh dương chính) */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu đậm hơn khi di chuột */
+    transform: translateY(-1px); /* Hiệu ứng nhấc lên */
+}
+
+button:active {
+    transform: translateY(1px); /* Hiệu ứng nhấn xuống */
+}
+
+/* Nút Revoke (Màu xám cho khác biệt) */
+#revokeBtn {
+    background-color: #6c757d; /* Màu xám */
+}
+
+#revokeBtn:hover {
+    background-color: #5a6268;
+}
+
+/* --- Ô nhập liệu (Inputs) --- */
+input[type="text"],
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 100%; /* Chiếm 100% chiều rộng của khối cha */
+    max-width: 450px; /* Giới hạn chiều rộng */
+}
+
+/* --- Bảng (Tables) --- */
+table {
+    width: 100%; /* Luôn chiếm 100% chiều rộng của section */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    /* Giúp các địa chỉ dài tự động xuống dòng */
+    word-break: break-all; 
+}
+
+thead {
+    background-color: #007bff; /* Tiêu đề bảng màu xanh */
+    color: white;
+    font-weight: bold;
+}
+
+/* Màu xen kẽ cho các hàng trong bảng */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* --- Hiển thị địa chỉ đã kết nối --- */
+#account {
+    font-size: 14px;
+    font-weight: bold;
+    color: #28a745; /* Màu xanh lá cho trạng thái "Connected" */
+    word-break: break-all; /* Ngăn địa chỉ dài phá vỡ layout */
+    text-align: center;
+}

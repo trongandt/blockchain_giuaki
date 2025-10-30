@@ -1,0 +1,40 @@
+/* Dán code này vào file style.css, thay thế các rule cũ cho button */
+
+button {
+    background-color: #007bff;
+    color: white;
+    
+    /* YÊU CẦU 1 & 2: Kích thước nhỏ hơn & Thêm viền */
+    padding: 10px 18px; /* Giảm padding (trước đây là 12px 20px) */
+    border: 1px solid #0056b3; /* Thêm viền màu xanh đậm */
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px;
+    
+    /* Cập nhật transition để hiệu ứng mượt hơn */
+    transition: all 0.2s ease; 
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+button:active {
+    /* YÊU CẦU 3: Sáng lên khi nhấn */
+    transform: translateY(1px); /* Giữ hiệu ứng nhấn xuống */
+    filter: brightness(120%); /* Làm nút sáng lên 20% */
+}
+
+/* Cập nhật nút Revoke để có viền khớp màu */
+#revokeBtn {
+    background-color: #6c757d;
+    border-color: #5a6268; /* Thêm viền màu xám đậm */
+}
+
+#revokeBtn:hover {
+    background-color: #5a6268;
+}

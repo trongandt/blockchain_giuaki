@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #fafafa;
+}
+h2, h3 {
+  color: #333;
+}
+input, button {
+  margin: 5px;
+  padding: 6px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+button {
+  cursor: pointer;
+}
+
+#historyTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+#historyTable th, #historyTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#historyTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#historyTable tr:hover {
+  background-color: #f1f1f1;
+}
